@@ -2,7 +2,7 @@ package com.codecafe.algorithms.sorting;
 
 import com.codecafe.algorithms.utils.GeneralUtils;
 
-public class BubbleSort {
+public class InsertionSort {
 
 	public static void main(String[] args) {
 
@@ -16,7 +16,7 @@ public class BubbleSort {
 					System.out.print(sortingData.getRandomNumbers()[i]+" ");
 				}
 			}
-			bubbleSort(sortingData.getRandomNumbers());
+			insertionSort(sortingData.getRandomNumbers());
 
 			if(sortingData.getBestCaseData() != null && sortingData.getBestCaseData().length > 0) {
 				System.out.println("\n---------------\nBest Case\n---------------");
@@ -26,7 +26,7 @@ public class BubbleSort {
 						System.out.print(sortingData.getBestCaseData()[i]+" ");
 					}
 				}
-				bubbleSort(sortingData.getBestCaseData());
+				insertionSort(sortingData.getBestCaseData());
 			}
 
 			if(sortingData.getWorstCaseData() != null && sortingData.getWorstCaseData().length > 0) {
@@ -37,7 +37,7 @@ public class BubbleSort {
 						System.out.print(sortingData.getWorstCaseData()[i]+" ");
 					}
 				}
-				bubbleSort(sortingData.getWorstCaseData());
+				insertionSort(sortingData.getWorstCaseData());
 			}
 		} else {
 			if(sortingData.getTestDataMap() != null) {
@@ -45,7 +45,7 @@ public class BubbleSort {
 				for(Integer key : sortingData.getTestDataMap().keySet()) {
 					c++;
 					System.out.printf("\nTest #%d with %d elements", c, sortingData.getTestDataMap().get(key).size());
-					bubbleSort(sortingData.getTestDataMap().get(key).stream().mapToInt(i -> i).toArray());
+					insertionSort(sortingData.getTestDataMap().get(key).stream().mapToInt(i -> i).toArray());
 				}
 			}
 		}
@@ -53,20 +53,22 @@ public class BubbleSort {
 	}
 
 
-	private static void bubbleSort(int[] elements) {
+	private static void insertionSort(int[] elements) {
 
 		int n = elements.length;
 
 		long startTime = System.nanoTime();
-		for(int i=0; i<n; i++) {
-			for(int j=1; j<n-i; j++) {
-				if(elements[j-1] > elements[j]) {
-					int temp = elements[j-1];
-					elements[j-1] = elements[j];
-					elements[j] = temp;
-				}
-			}
-		}
+		// start
+		for (int i=1; i<n; i++) { 
+	        int key = elements[i]; 
+	        int j = i-1;
+	        while (j >= 0 && elements[j]>key) {
+	            elements[j+1] = elements[j];
+	            j = j-1;
+	        }
+	        elements[j+1] = key; 
+	    }
+		// end
 		long executionTime = System.nanoTime() - startTime;
 
 		if(elements.length <= 500) {
