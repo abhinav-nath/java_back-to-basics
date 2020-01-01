@@ -3,17 +3,18 @@ package com.codecafe.commonproblems.patterns;
 import java.util.Scanner;
 /*
 
-Enter a number : 5
+Enter a number : 6
 
 1 
-2 3 
-4 5 6 
-7 8 9 10 
-11 12 13 14 15 
+1 0 
+1 0 1 
+1 0 1 0 
+1 0 1 0 1 
+1 0 1 0 1 0 
 
-*/
+ */
 
-public class NumberRightTriangle2 {
+public class NumberRightTriangle6 {
 
 	public static void main(String[] args) {
 
@@ -23,13 +24,14 @@ public class NumberRightTriangle2 {
 		int num = sc.nextInt();
 		System.out.println();
 
-		int counter = 1;
 		// outer loop to handle number of rows
 		for(int i=1; i<=num; i++) {
 			// inner loop to handle number of columns
 			for(int j=1; j<=i; j++) {
-				System.out.print(counter+" ");
-				counter++;
+				if(j%2 == 0)
+					System.out.print(0+" ");
+				else
+					System.out.print(1+" ");
 			}
 			System.out.println();
 		}

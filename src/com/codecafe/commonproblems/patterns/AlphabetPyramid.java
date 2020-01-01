@@ -2,18 +2,18 @@ package com.codecafe.commonproblems.patterns;
 
 import java.util.Scanner;
 /*
+Enter a number : 6
 
-Enter a number : 5
-
-1 
-2 3 
-4 5 6 
-7 8 9 10 
-11 12 13 14 15 
+     A 
+    A B 
+   A B C 
+  A B C D 
+ A B C D E 
+A B C D E F 
 
 */
 
-public class NumberRightTriangle2 {
+public class AlphabetPyramid {
 
 	public static void main(String[] args) {
 
@@ -23,18 +23,23 @@ public class NumberRightTriangle2 {
 		int num = sc.nextInt();
 		System.out.println();
 
-		int counter = 1;
+		int alphabet;
 		// outer loop to handle number of rows
 		for(int i=1; i<=num; i++) {
+			alphabet = 65;
+			// inner loop to handle number of spaces
+			for(int k=num-i; k>=1; k--) {
+				System.out.print(" ");
+			}
 			// inner loop to handle number of columns
 			for(int j=1; j<=i; j++) {
-				System.out.print(counter+" ");
-				counter++;
+				System.out.print((char)alphabet+" ");
+				alphabet++;
 			}
+
 			System.out.println();
 		}
 
 		sc.close();
 	}
-
 }
