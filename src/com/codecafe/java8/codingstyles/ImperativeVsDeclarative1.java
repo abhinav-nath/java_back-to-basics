@@ -18,7 +18,7 @@ public class ImperativeVsDeclarative1 {
 		System.out.println("Sum with Imperative approach : " + sum);
 
 		/* Declarative Approach -- What result to achieve ? */
-
+		/* Need not to care about how it is done behind the scenes */
 		int sum1 = IntStream.rangeClosed(0, 100).sum();
 
 		System.out.println("Sum with Declarative approach : " + sum1);
