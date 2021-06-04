@@ -8,7 +8,7 @@ public class InterfaceDemo {
 
         parent.foo();
 
-        // parent.bar(); compilation error
+        // parent.bar(); compilation error : The method bar() is undefined for the type IParent
 
         ((Child) parent).bar();
 
