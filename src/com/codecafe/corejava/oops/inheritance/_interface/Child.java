@@ -1,4 +1,4 @@
-package com.codecafe.corejava.oops.inheritance;
+package com.codecafe.corejava.oops.inheritance._interface;
 
 public class Child implements IParent {
 
