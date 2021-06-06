@@ -1,9 +1,11 @@
-package com.codecafe.corejava.trycatchfinally;
+package com.codecafe.corejava.exception_handling.trycatchfinally;
 
 // if try block throws an exception
 // and there is a finally block which
 // also throws an exception then
 // only finally block's exception will be thrown
+
+// finally acts like a catch block in this case
 
 public class TryFinallyTest {
 
@@ -24,6 +26,6 @@ public class TryFinallyTest {
 /*
 
 Exception in thread "main" java.lang.ArithmeticException: / by zero
-at com.codecafe.corejava.trycatchfinally.TryFinallyTest.main(TryFinallyTest.java:17)
+    at com.codecafe.corejava.exception_handling.trycatchfinally.TryFinallyTest.main(TryFinallyTest.java:19)
 
 */

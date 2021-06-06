@@ -1,4 +1,4 @@
-package com.codecafe.miscellaneous;
+package com.codecafe.corejava.exception_handling.trycatchfinally;
 
 /*
   The code in a finally block takes precedence over the return statement.
