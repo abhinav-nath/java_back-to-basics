@@ -39,6 +39,12 @@ public class IntegerCacheDemo {
         System.out.println(a.equals(b)); // true
         System.out.println(a == b);      // true
 
+        a = 1000;
+        b = 1000;
+
+        System.out.println(a.equals(b)); // true
+        System.out.println(a == b);      // false
+
     }
 
 }
