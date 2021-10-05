@@ -55,7 +55,6 @@ public class ComparatorDemo {
 
         for (Laptop laptop : laptops)
             System.out.println(laptop);
-
     }
 
 }

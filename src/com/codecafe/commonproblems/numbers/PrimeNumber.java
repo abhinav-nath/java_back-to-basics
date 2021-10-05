@@ -20,49 +20,50 @@ Enter a number : 53
 
 public class PrimeNumber {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter a number : ");
-		int inputNumber = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number : ");
+        int inputNumber = sc.nextInt();
 
-		if(isPrime(inputNumber))
-			System.out.println(inputNumber + " is a Prime number");
-		else {
-			System.out.println(inputNumber + " is not a Prime number");
-			
-			System.out.println("\nIt is divisible by : ");
-			List<Integer> factors = findFactors(inputNumber);
-			System.out.print(factors);
-		}
+        if (isPrime(inputNumber))
+            System.out.println(inputNumber + " is a Prime number");
+        else {
+            System.out.println(inputNumber + " is not a Prime number");
 
-		sc.close();
-	}
+            System.out.println("\nIt is divisible by : ");
+            List<Integer> factors = findFactors(inputNumber);
+            System.out.print(factors);
+        }
 
-
-	private static boolean isPrime(int inputNumber) {
-
-		if(inputNumber == 1)
-			return true;
-
-		for(int i=2; i<=inputNumber/2; i++) {
-			if(inputNumber % i == 0)
-				return false;
-		}
-
-		return true;
-	}
+        sc.close();
+    }
 
 
-	private static List<Integer> findFactors(int inputNumber) {
-		
-		List<Integer> listOfFactors = new ArrayList<>();
-		
-		for(int i=2; i<=inputNumber/2; i++) {
-			if(inputNumber % i == 0)
-				listOfFactors.add(i);
-		}
-		
-		return listOfFactors;
-	}
+    private static boolean isPrime(int inputNumber) {
+
+        if (inputNumber == 1)
+            return true;
+
+        for (int i = 2; i <= inputNumber / 2; i++) {
+            if (inputNumber % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+
+
+    private static List<Integer> findFactors(int inputNumber) {
+
+        List<Integer> listOfFactors = new ArrayList<>();
+
+        for (int i = 2; i <= inputNumber / 2; i++) {
+            if (inputNumber % i == 0)
+                listOfFactors.add(i);
+        }
+
+        return listOfFactors;
+    }
+
 }

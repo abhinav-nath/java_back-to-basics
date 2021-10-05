@@ -12,18 +12,19 @@ package com.codecafe.corejava.exception_handling.trycatchfinally;
  */
 public class FinallyRunsBeforeReturn {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		System.out.println(proveIt());
-	}
+        System.out.println(proveIt());
+    }
 
-	private static int proveIt() {
+    private static int proveIt() {
 
-		try {
-			System.out.println("Try block");
-			return 1;
-		} finally {
-			System.out.println("Finally block");
-		}
-	}
+        try {
+            System.out.println("Try block");
+            return 1;
+        } finally {
+            System.out.println("Finally block");
+        }
+    }
+
 }

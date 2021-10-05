@@ -20,7 +20,6 @@ From the Integer class:
 public class IntegerCacheDemo {
 
     public static void main(String[] args) {
-
         Integer a = 128;
         Integer b = 128;
 
@@ -44,7 +43,6 @@ public class IntegerCacheDemo {
 
         System.out.println(a.equals(b)); // true
         System.out.println(a == b);      // false
-
     }
 
 }

@@ -15,46 +15,46 @@ import java.util.Scanner;
 
 public class ReverseAddPalindrome {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter a number : ");
-		long number = sc.nextInt();
-		
-		if(isPalindrome(number)) {
-			System.out.println(number+" is already a Palindrome number");
-		} else {
-			while(!isPalindrome(number)) {
-				long reverse = reverseNumber(number);
-				long sum = number + reverse;
-				System.out.println(number+" + "+reverse+" = "+sum);
-				number = sum;
-			}
-		}
-		
-		sc.close();
-	}
+        System.out.println("Enter a number : ");
+        long number = sc.nextInt();
 
-	private static boolean isPalindrome(long input) {
-		if(reverseNumber(input) == input)
-			return true;
-		else
-			return false;
-	}
+        if (isPalindrome(number)) {
+            System.out.println(number + " is already a Palindrome number");
+        } else {
+            while (!isPalindrome(number)) {
+                long reverse = reverseNumber(number);
+                long sum = number + reverse;
+                System.out.println(number + " + " + reverse + " = " + sum);
+                number = sum;
+            }
+        }
 
-	private static long reverseNumber(long number) {
+        sc.close();
+    }
 
-		long reverse = 0;
-		long rem = 0;
+    private static boolean isPalindrome(long input) {
+        if (reverseNumber(input) == input)
+            return true;
+        else
+            return false;
+    }
 
-		while(number != 0) {
-			rem = number % 10;
-			reverse = (reverse * 10) + rem;
-			number = number/10;
-		}
+    private static long reverseNumber(long number) {
 
-		return reverse;
-	}
+        long reverse = 0;
+        long rem = 0;
+
+        while (number != 0) {
+            rem = number % 10;
+            reverse = (reverse * 10) + rem;
+            number = number / 10;
+        }
+
+        return reverse;
+    }
 
 }

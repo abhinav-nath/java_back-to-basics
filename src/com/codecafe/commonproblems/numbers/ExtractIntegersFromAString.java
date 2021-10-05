@@ -11,33 +11,33 @@ package com.codecafe.commonproblems.numbers;
  */
 public class ExtractIntegersFromAString {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		String str = "avbkjd1122klj4 543 af";
-		System.out.println(extractInt(str));
-		
-		str = "wa23kjn2kjn5jn3 3j3j lk5ll2 567   422    ";
-		System.out.println(extractInt(str));
+        String str = "avbkjd1122klj4 543 af";
+        System.out.println(extractInt(str));
 
-	}
+        str = "wa23kjn2kjn5jn3 3j3j lk5ll2 567   422    ";
+        System.out.println(extractInt(str));
+
+    }
 
 
-	private static String extractInt(String str) {
+    private static String extractInt(String str) {
 
-		// Replacing every non-digit number with a space(" ")
-		str = str.replaceAll("[^\\d]", " ");
+        // Replacing every non-digit number with a space(" ")
+        str = str.replaceAll("[^\\d]", " ");
 
-		// Remove extra spaces from the beginning and ending of the string 
-		str = str.trim();
+        // Remove extra spaces from the beginning and ending of the string
+        str = str.trim();
 
-		// Replace all the consecutive white spaces with a single space
-		str = str.replaceAll(" +", " "); 
+        // Replace all the consecutive white spaces with a single space
+        str = str.replaceAll(" +", " ");
 
-		if (str.equals("")) 
-			return "-1";
+        if (str.equals(""))
+            return "-1";
 
-		return str;
+        return str;
 
-	}
+    }
 
 }

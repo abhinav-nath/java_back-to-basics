@@ -11,7 +11,6 @@ public class CharOccurrence {
         countUsingArray(str);
 
         // countUsingHashMap(str);
-
     }
 
     private static void countUsingArray(String str) {
@@ -29,15 +28,15 @@ public class CharOccurrence {
         for (int i = 0; i < len; i++) {
 
             ch[i] = str.charAt(i);
-            
+
             int found = 0;
 
             for (int j = 0; j <= i; j++) {
                 if (str.charAt(i) == str.charAt(j))
                     found++;
             }
-            
-            if(found == 1)
+
+            if (found == 1)
                 System.out.println(str.charAt(i) + " - " + count[str.charAt(i)]);
         }
     }

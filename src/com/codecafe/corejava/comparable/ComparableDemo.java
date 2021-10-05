@@ -31,7 +31,6 @@ public class ComparableDemo {
 
         for (Laptop laptop : laptops)
             System.out.println(laptop);
-
     }
 
 }

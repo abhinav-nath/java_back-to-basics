@@ -15,4 +15,5 @@ class Factorial {
         result = factorial(number);
         System.out.printf("factorial(%d) = %d", number, result);
     }
+
 }
