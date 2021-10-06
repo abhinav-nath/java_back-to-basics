@@ -1,4 +1,4 @@
-package com.codecafe.javabacktobasics.enums;
+package com.codecafe.javabacktobasics.corejava.enums;
 
 enum CupSize {
 
