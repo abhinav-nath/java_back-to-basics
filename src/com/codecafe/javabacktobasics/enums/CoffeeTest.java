@@ -53,14 +53,18 @@ public class CoffeeTest {
 
     public static void main(String[] args) {
         CupSize cup = CupSize.MEDIUM;
-        System.out.println("Volume is " + cup);
+        System.out.println("Cup Size : " + cup + ", Volume : " + cup.getVolume());
 
         Coffee smallCoffee = new Coffee(CupSize.SMALL);
-        System.out.println("Volume is " + smallCoffee.getCupSize().getVolume());
+        System.out.println("\nCup size :" + smallCoffee.getCupSize());
+        System.out.println("Volume : " + smallCoffee.getCupSize().getVolume());
         System.out.println("Details : " + smallCoffee.getCupSize().getDetails());
 
+        System.out.println();
+
         Coffee mediumCoffee = new Coffee(CupSize.MEDIUM);
-        System.out.println("Volume is " + mediumCoffee.getCupSize().getVolume());
+        System.out.println("Cup size :" + mediumCoffee.getCupSize());
+        System.out.println("Volume : " + mediumCoffee.getCupSize().getVolume());
         System.out.println("Details : " + mediumCoffee.getCupSize().getDetails());
     }
 
