@@ -14,7 +14,6 @@ public class TryCatchFinallyTest {
 
     public static void someMethod() {
         String s = null;
-
         try {
             System.out.println("try block");
             System.out.println(s.length());

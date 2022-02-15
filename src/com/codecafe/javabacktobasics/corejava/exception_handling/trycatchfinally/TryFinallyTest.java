@@ -10,7 +10,6 @@ package com.codecafe.javabacktobasics.corejava.exception_handling.trycatchfinall
 public class TryFinallyTest {
 
     public static void main(String[] args) {
-
         try {
             int x = 2 / 0;
         } finally {

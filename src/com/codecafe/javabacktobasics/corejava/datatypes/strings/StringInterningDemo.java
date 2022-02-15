@@ -1,13 +1,10 @@
-package com.codecafe.javabacktobasics.corejava.datatypes;
+package com.codecafe.javabacktobasics.corejava.datatypes.strings;
 
 public class StringInterningDemo {
 
     public static void main(String[] args) {
-
         String s1 = "shazam";
-
         String s2 = "shazam";
-
         String s3 = "shazam!";
 
         System.out.println("s1 hashCode : " + s1.hashCode());
@@ -43,7 +40,6 @@ public class StringInterningDemo {
 
         System.out.println(s9 == s10); // true
         System.out.println(s9.equals(s10)); // true
-
     }
 
 }

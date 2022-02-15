@@ -3,7 +3,6 @@ package com.codecafe.javabacktobasics.corejava.oops.inheritance._class;
 public class Main {
 
     public static void main(String[] args) {
-
         Parent parent = new Child();
 
         parent.foo();
@@ -15,7 +14,6 @@ public class Main {
 
         child.foo();
         child.bar();
-
     }
 
 }

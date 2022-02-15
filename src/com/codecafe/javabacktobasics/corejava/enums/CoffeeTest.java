@@ -27,7 +27,7 @@ enum CupSize {
 }
 
 class Coffee {
-    private CupSize cupSize;
+    private final CupSize cupSize;
 
     public Coffee(CupSize cupSize) {
         this.cupSize = cupSize;
@@ -35,10 +35,6 @@ class Coffee {
 
     public CupSize getCupSize() {
         return cupSize;
-    }
-
-    public void setCupSize(CupSize cupSize) {
-        this.cupSize = cupSize;
     }
 
     @Override
