@@ -21,6 +21,7 @@ public final class ImmutableStudent {
         this.dob = dobClone;
     }
 
+    // do not provide setter methods
     public int getId() {
         return id;
     }
@@ -29,7 +30,7 @@ public final class ImmutableStudent {
         return name;
     }
 
-    // is.getAge().setYear(1993); can break immutability
+    // obj.getDob().setYear(1993); can break immutability
     // handle this scenario in getDob()
     public DateOfBirth getDob() {
         // create a clone of DateOfBirth object and return a new object every time
