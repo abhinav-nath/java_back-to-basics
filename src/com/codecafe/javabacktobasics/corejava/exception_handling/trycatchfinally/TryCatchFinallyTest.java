@@ -8,21 +8,21 @@ package com.codecafe.javabacktobasics.corejava.exception_handling.trycatchfinall
 
 public class TryCatchFinallyTest {
 
-    public static void main(String[] args) {
-        someMethod();
-    }
+  public static void main(String[] args) {
+    someMethod();
+  }
 
-    public static void someMethod() {
-        String s = null;
-        try {
-            System.out.println("try block");
-            System.out.println(s.length());
-        } catch (NullPointerException npe) {
-            System.out.println("catch block");
-            return;
-        } finally {
-            System.out.println("finally block");
-        }
+  public static void someMethod() {
+    String s = null;
+    try {
+      System.out.println("try block");
+      System.out.println(s.length());
+    } catch (NullPointerException npe) {
+      System.out.println("catch block");
+      return;
+    } finally {
+      System.out.println("finally block");
     }
+  }
 
 }

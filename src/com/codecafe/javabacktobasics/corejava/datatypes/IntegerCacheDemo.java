@@ -19,30 +19,30 @@ From the Integer class:
 
 public class IntegerCacheDemo {
 
-    public static void main(String[] args) {
-        Integer a = 128;
-        Integer b = 128;
+  public static void main(String[] args) {
+    Integer a = 128;
+    Integer b = 128;
 
-        System.out.println(a.equals(b)); // true
-        System.out.println(a == b);      // false
+    System.out.println(a.equals(b)); // true
+    System.out.println(a == b);      // false
 
-        a = 127;
-        b = 127;
+    a = 127;
+    b = 127;
 
-        System.out.println(a.equals(b)); // true
-        System.out.println(a == b);      // true
+    System.out.println(a.equals(b)); // true
+    System.out.println(a == b);      // true
 
-        a = -128;
-        b = -128;
+    a = -128;
+    b = -128;
 
-        System.out.println(a.equals(b)); // true
-        System.out.println(a == b);      // true
+    System.out.println(a.equals(b)); // true
+    System.out.println(a == b);      // true
 
-        a = 1000;
-        b = 1000;
+    a = 1000;
+    b = 1000;
 
-        System.out.println(a.equals(b)); // true
-        System.out.println(a == b);      // false
-    }
+    System.out.println(a.equals(b)); // true
+    System.out.println(a == b);      // false
+  }
 
 }

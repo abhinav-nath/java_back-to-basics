@@ -12,43 +12,41 @@ import java.util.Scanner;
  */
 public class AdamNumber {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a range > 10 to find Adam numbers : ");
+    int range = sc.nextInt();
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a range > 10 to find Adam numbers : ");
-        int range = sc.nextInt();
+    if (range <= 10) {
+      System.out.println("Invalid range");
+    } else {
 
-        if (range <= 10) {
-            System.out.println("Invalid range");
-        } else {
+      System.out.println("Adam numbers upto " + range + " are :");
+      for (int i = 11; i <= range; i++) {
 
-            System.out.println("Adam numbers upto " + range + " are :");
-            for (int i = 11; i <= range; i++) {
+        long reverseNumber = reverseNumber(i);
+        long squareOfNumber = i * i;
+        long squareOfReverseNumber = reverseNumber * reverseNumber;
 
-                long reverseNumber = reverseNumber(i);
-                long squareOfNumber = i * i;
-                long squareOfReverseNumber = reverseNumber * reverseNumber;
+        if (squareOfNumber == reverseNumber(squareOfReverseNumber))
+          System.out.print(i + " ");
 
-                if (squareOfNumber == reverseNumber(squareOfReverseNumber))
-                    System.out.print(i + " ");
+        sc.close();
+      }
+    }
+  }
 
-                sc.close();
-            }
-        }
+  private static long reverseNumber(long number) {
+    long rem = 0;
+    long reverse = 0;
+
+    while (number != 0) {
+      rem = number % 10;
+      reverse = (10 * reverse) + rem;
+      number = number / 10;
     }
 
-    private static long reverseNumber(long number) {
-
-        long rem = 0;
-        long reverse = 0;
-
-        while (number != 0) {
-            rem = number % 10;
-            reverse = (10 * reverse) + rem;
-            number = number / 10;
-        }
-
-        return reverse;
-    }
+    return reverse;
+  }
 
 }

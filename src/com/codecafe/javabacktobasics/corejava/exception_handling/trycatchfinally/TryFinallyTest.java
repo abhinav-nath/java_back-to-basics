@@ -9,22 +9,19 @@ package com.codecafe.javabacktobasics.corejava.exception_handling.trycatchfinall
 
 public class TryFinallyTest {
 
-    public static void main(String[] args) {
-        try {
-            int x = 2 / 0;
-        } finally {
-            // if line 13 throws or does not throw an exception,
-            // this code will always be executed
-            int x = 5 / 0;
-        }
+  public static void main(String[] args) {
+    try {
+      int x = 2 / 0;
+    } finally {
+      // if line 13 throws or does not throw an exception,
+      // this code will always be executed
+      int x = 5 / 0;
     }
+  }
 
 }
 
-
 /*
-
 Exception in thread "main" java.lang.ArithmeticException: / by zero
     at com.codecafe.javabacktobasics.corejava.exception_handling.trycatchfinally.TryFinallyTest.main(TryFinallyTest.java:19)
-
 */

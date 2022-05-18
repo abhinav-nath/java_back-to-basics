@@ -15,46 +15,44 @@ import java.util.Scanner;
 
 public class ReverseAddPalindrome {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number : ");
+    long number = sc.nextInt();
 
-        System.out.println("Enter a number : ");
-        long number = sc.nextInt();
-
-        if (isPalindrome(number)) {
-            System.out.println(number + " is already a Palindrome number");
-        } else {
-            while (!isPalindrome(number)) {
-                long reverse = reverseNumber(number);
-                long sum = number + reverse;
-                System.out.println(number + " + " + reverse + " = " + sum);
-                number = sum;
-            }
-        }
-
-        sc.close();
+    if (isPalindrome(number)) {
+      System.out.println(number + " is already a Palindrome number");
+    } else {
+      while (!isPalindrome(number)) {
+        long reverse = reverseNumber(number);
+        long sum = number + reverse;
+        System.out.println(number + " + " + reverse + " = " + sum);
+        number = sum;
+      }
     }
 
-    private static boolean isPalindrome(long input) {
-        if (reverseNumber(input) == input)
-            return true;
-        else
-            return false;
+    sc.close();
+  }
+
+  private static boolean isPalindrome(long input) {
+    if (reverseNumber(input) == input)
+      return true;
+    else
+      return false;
+  }
+
+  private static long reverseNumber(long number) {
+    long reverse = 0;
+    long rem = 0;
+
+    while (number != 0) {
+      rem = number % 10;
+      reverse = (reverse * 10) + rem;
+      number = number / 10;
     }
 
-    private static long reverseNumber(long number) {
-
-        long reverse = 0;
-        long rem = 0;
-
-        while (number != 0) {
-            rem = number % 10;
-            reverse = (reverse * 10) + rem;
-            number = number / 10;
-        }
-
-        return reverse;
-    }
+    return reverse;
+  }
 
 }

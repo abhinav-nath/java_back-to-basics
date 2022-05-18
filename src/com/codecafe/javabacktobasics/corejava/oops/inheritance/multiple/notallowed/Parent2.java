@@ -2,8 +2,8 @@ package com.codecafe.javabacktobasics.corejava.oops.inheritance.multiple.notallo
 
 public class Parent2 {
 
-    public void bar() {
-        System.out.println("Parent2 bar");
-    }
+  public void bar() {
+    System.out.println("Parent2 bar");
+  }
 
 }

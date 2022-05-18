@@ -6,9 +6,9 @@ package com.codecafe.javabacktobasics.corejava.oops.inheritance.multiple.allowed
 // Impl class can implement multiple Interfaces
 public class ParentImpl implements IParent1, IParent2 {
 
-    @Override
-    public void foo() {
-        System.out.println("ParentImpl foo");
-    }
+  @Override
+  public void foo() {
+    System.out.println("ParentImpl foo");
+  }
 
 }
