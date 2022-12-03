@@ -1,4 +1,5 @@
 /bin/
+/out
 *.core.xml
 *.prefs
 /classes/

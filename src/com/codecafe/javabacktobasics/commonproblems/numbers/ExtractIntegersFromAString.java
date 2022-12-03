@@ -22,7 +22,7 @@ public class ExtractIntegersFromAString {
 
   private static String extractInt(String str) {
     // Replacing every non-digit number with a space(" ")
-    str = str.replaceAll("[^\\d]", " ");
+    str = str.replaceAll("\\D", " ");
 
     // Remove extra spaces from the beginning and ending of the string
     str = str.trim();

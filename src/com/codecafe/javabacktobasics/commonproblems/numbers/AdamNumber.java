@@ -25,7 +25,7 @@ public class AdamNumber {
       for (int i = 11; i <= range; i++) {
 
         long reverseNumber = reverseNumber(i);
-        long squareOfNumber = i * i;
+        long squareOfNumber = (long) i * i;
         long squareOfReverseNumber = reverseNumber * reverseNumber;
 
         if (squareOfNumber == reverseNumber(squareOfReverseNumber))
@@ -37,7 +37,7 @@ public class AdamNumber {
   }
 
   private static long reverseNumber(long number) {
-    long rem = 0;
+    long rem;
     long reverse = 0;
 
     while (number != 0) {
