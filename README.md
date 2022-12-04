@@ -11,6 +11,7 @@ Core Java Concepts
 * [comparable](src/com/codecafe/javabacktobasics/corejava/comparable)
 * [comparator](src/com/codecafe/javabacktobasics/corejava/comparator)
 * [Annotations](src/com/codecafe/javabacktobasics/corejava/annotations/annotations.md)
+* [Optional](src/com/codecafe/javabacktobasics/corejava/optional)
 * [Records](src/com/codecafe/javabacktobasics/corejava/records/records.md)
 * **OOP**
   - [Inheritance](src/com/codecafe/javabacktobasics/corejava/oops/inheritance)
