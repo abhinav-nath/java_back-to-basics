@@ -4,6 +4,7 @@ Core Java Concepts
 
 * [Data types](src/com/codecafe/javabacktobasics/corejava/datatypes)
 * [Exception Handling](src/com/codecafe/javabacktobasics/corejava/exception_handling)
+  - [Custom Exceptions](src/com/codecafe/javabacktobasics/corejava/exception_handling/custom_exceptions)
 * [Garbage Collection](src/com/codecafe/javabacktobasics/corejava/garbage_collection)
 * [Enums](src/com/codecafe/javabacktobasics/corejava/enums)
 * [Immutability](src/com/codecafe/javabacktobasics/corejava/immutability)
