@@ -2,7 +2,22 @@
 
 Java **Annotation** is a tag that represents the _metadata_ i.e. attached with class, interface, methods or fields to indicate some additional information which can be used by java compiler and JVM.
 
-An example of Annotations:
+In its simplest form, an annotation looks like the following:
+
+```java
+@Entity
+```
+
+The at sign character (`@`) indicates to the compiler that what follows is an annotation.
+
+Example:
+
+```java
+@Override
+void mySuperMethod() { ... }
+```
+
+Another example:
 
 ![warning](warning.png)
 
@@ -85,12 +100,16 @@ How to apply Multi-Value Annotation:
 @MyAnnotation(value1 = 10, value2 = "some value", value3 = "some other value")
 ```
 
-## Built-in Annotations used in custom annotations in java
+## Annotations that apply to other Annotations
+
+Annotations that apply to other annotations are called _meta-annotations_.
+There are several meta-annotation types defined in `java.lang.annotation`.
 
 1. `@Target`
 2. `@Retention`
 3. `@Inherited`
 4. `@Documented`
+5. `@Repeatable`
 
 ### `@Target`
 
@@ -130,7 +149,7 @@ Example to specify annotation for a class, methods or fields:
 
 ### `@Retention`
 
-`@Retention` is used to specify to what level annotation will be available.
+`@Retention` is used to specify how the marked annotation is stored.
 
 | Retention Policy        | Availability                                                                                              |
 |-------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -167,3 +186,14 @@ class Subclass extends Superclass { }
 ### `@Documented`
 
 `@Documented` marks the annotation for inclusion in the documentation.
+
+### `@Repeatable`
+
+`@Repeatable` annotation, introduced in Java SE 8, indicates that the marked annotation can be applied more than once to the same declaration or type use.
+
+```java
+@Author(name = "Jane Doe")
+@Author(name = "John Smith")
+class MyClass { ... }
+```
+
