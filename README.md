@@ -9,6 +9,7 @@ Core Java Concepts
 * [Immutability](src/com/codecafe/javabacktobasics/corejava/immutability)
 * [comparable](src/com/codecafe/javabacktobasics/corejava/comparable)
 * [comparator](src/com/codecafe/javabacktobasics/corejava/comparator)
+* [Annotations](src/com/codecafe/javabacktobasics/corejava/annotations/annotations.md)
 * [Records](src/com/codecafe/javabacktobasics/corejava/records/records.md)
 * **OOP**
   - [Inheritance](src/com/codecafe/javabacktobasics/corejava/oops/inheritance)
