@@ -3,10 +3,10 @@ package com.codecafe.javabacktobasics.commonproblems.strings;
 import java.util.Scanner;
 
 /*
-Enter a String :
-hello world
+  Enter a String :
+  hello world
 
-New String is : hhheeellllllooo wwwooorrrlllddd
+  New String is : hhheeellllllooo wwwooorrrlllddd
 */
 
 public class DuplicateCharacters {
@@ -19,18 +19,16 @@ public class DuplicateCharacters {
 
     char[] charArray = inputString.toCharArray();
 
-    StringBuffer newString = new StringBuffer();
+    StringBuilder newString = new StringBuilder();
     for (char c : charArray) {
       if (c != ' ') {
-        for (int i = 1; i <= 3; i++) {
-          newString.append(c);
-        }
+        newString.append(String.valueOf(c).repeat(3));
       } else {
         newString.append(' ');
       }
     }
 
-    System.out.println("\nNew String is : " + newString.toString());
+    System.out.println("\nNew String is : " + newString);
     sc.close();
   }
 

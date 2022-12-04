@@ -9,12 +9,11 @@ public class CharOccurrence {
     String str = "helloworld";
 
     countUsingArray(str);
-
-    // countUsingHashMap(str);
+//    countUsingHashMap(str);
   }
 
   private static void countUsingArray(String str) {
-    int count[] = new int[256];
+    int[] count = new int[256];
 
     int len = str.length();
 
@@ -23,7 +22,7 @@ public class CharOccurrence {
       count[str.charAt(i)]++;
 
     // Create an array of given String size
-    char ch[] = new char[str.length()];
+    char[] ch = new char[str.length()];
 
     for (int i = 0; i < len; i++) {
 
@@ -45,10 +44,7 @@ public class CharOccurrence {
     Map<Character, Integer> charMap = new HashMap<>();
 
     for (char c : str.toCharArray()) {
-      if (charMap.get(c) != null)
-        charMap.put(c, charMap.get(c) + 1);
-      else
-        charMap.put(c, 1);
+      charMap.merge(c, 1, Integer::sum);
     }
 
     for (char c : str.toCharArray()) {
