@@ -13,5 +13,6 @@ Core Java Concepts
 * [Annotations](src/com/codecafe/javabacktobasics/corejava/annotations/annotations.md)
 * [Optional](src/com/codecafe/javabacktobasics/corejava/optional)
 * [Records](src/com/codecafe/javabacktobasics/corejava/records/records.md)
+* [Strings](src/com/codecafe/javabacktobasics/corejava/strings)
 * **OOP**
   - [Inheritance](src/com/codecafe/javabacktobasics/corejava/oops/inheritance)
