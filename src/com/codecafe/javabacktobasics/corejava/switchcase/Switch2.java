@@ -3,6 +3,8 @@ package com.codecafe.javabacktobasics.corejava.switchcase;
 /**
  * Java 8 : Switch Statement
  * In Java 8 strings & enum were introduced in case values and switch statements started to evolve
+ * <p>
+ * Example of String switch case:
  */
 public class Switch2 {
 
