@@ -16,3 +16,5 @@ Core Java Concepts
 * [Strings](src/com/codecafe/javabacktobasics/corejava/strings)
 * **OOP**
   - [Inheritance](src/com/codecafe/javabacktobasics/corejava/oops/inheritance)
+* Miscellaneous
+  - [Remove a field from JSON string]()
